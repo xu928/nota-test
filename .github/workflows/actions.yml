@@ -40,7 +40,7 @@ jobs:
         with:
           file: ./Dockerfile
           push: true
-          tags: nota:latest
+          tags: test/nota:latest
 #           tags: ${{ steps.docker_meta.outputs.tags }}
           
 #           labels: ${{ steps.docker_meta.outputs.labels }}
