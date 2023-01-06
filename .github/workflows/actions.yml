@@ -34,7 +34,7 @@ jobs:
           tags: dosp0911/nota:latest
   deploy:
     needs: build
-    name: continuos deploy
+    name: continuous deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -50,8 +50,8 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}
+          host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.PRIVATE_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           port: 22
           script: "docker-compose pull && docker-compose up -d"
