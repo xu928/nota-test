@@ -6,4 +6,8 @@ app = Flask(__name__)
 def test():
     return "test"
 
+@app.route('/train')
+def train():
+    return "train"
+
 app.run(host="0.0.0.0")
