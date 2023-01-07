@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, render_template
-from train import get_prediction, transform_image
+from train import get_prediction
 app = Flask(__name__)
 
 @app.route('/test')
@@ -20,6 +20,7 @@ def train():
 @app.route('/upload')
 def upload():
     return render_template('upload.html')
+
 @app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
