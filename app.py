@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/test')
 def test():
-    return "test2"
+    return "fork test2"
 
 @app.route('/train')
 def train():
