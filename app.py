@@ -9,7 +9,8 @@ def test():
 @app.route('/train')
 def train():
     from train import mnist_train
-    training_epochs = 1
+    e = request.args.get('epoch', default=1)
+    training_epochs = e
     batch_size = 32
     mnist_train(training_epochs, batch_size)
 
