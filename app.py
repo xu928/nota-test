@@ -10,7 +10,7 @@ def test():
 def train():
     from train import mnist_train
     e = request.args.get('epoch', default=1)
-    training_epochs = e
+    training_epochs = int(e)
     batch_size = 32
     mnist_train(training_epochs, batch_size)
 
